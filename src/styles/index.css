@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base { body { @apply bg-paper font-sans text-slate-800 antialiased; } :focus-visible { @apply outline outline-2 outline-offset-2 outline-brand-500; } }
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:opacity-50; }
+  .btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+  .btn-ghost { @apply btn text-slate-600 hover:bg-slate-100; }
+  .btn-outline { @apply btn border border-slate-200 bg-white text-slate-700 hover:bg-slate-50; }
+  .btn-danger { @apply btn bg-red-600 text-white hover:bg-red-700; }
+  .input { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400; }
+  .label { @apply mb-1 block text-sm font-medium text-slate-700; }
+  .card { @apply rounded-xl border border-slate-200 bg-white shadow-sm; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Tema oscuro: se activa con la clase .dark en <html> desde PrefsProvider. */
+.dark body { background-color: #0b1020; color: #e2e8f0; }
+.dark .bg-paper { background-color: #0b1020; }
+.dark .bg-white { background-color: #151c31; }
+.dark .bg-white\/60 { background-color: rgba(21, 28, 49, 0.6); }
+.dark .bg-white\/10 { background-color: rgba(255, 255, 255, 0.07); }
+.dark .bg-slate-50 { background-color: #111827; }
+.dark .bg-slate-50\/50 { background-color: rgba(17, 24, 39, 0.5); }
+.dark .bg-slate-100 { background-color: #1e293b; }
+.dark .bg-slate-200 { background-color: #334155; }
+.dark .bg-brand-50 { background-color: #1e1b3a; }
+.dark .bg-brand-100 { background-color: #2a2454; }
+.dark .card { background-color: #151c31; border-color: #29334d; }
+.dark .text-ink { color: #f1f5f9; }
+.dark .text-slate-950, .dark .text-slate-900, .dark .text-slate-800 { color: #f1f5f9; }
+.dark .text-slate-700 { color: #e2e8f0; }
+.dark .text-slate-600 { color: #cbd5e1; }
+.dark .text-slate-500 { color: #94a3b8; }
+.dark .text-slate-400 { color: #7f8ea6; }
+.dark .text-brand-600, .dark .text-brand-700 { color: #b9b1ff; }
+.dark .text-brand-200 { color: #c7c1ff; }
+.dark .border-slate-100, .dark .border-slate-200 { border-color: #29334d; }
+.dark .border-slate-300 { border-color: #3b4763; }
+.dark .input { background-color: #0f172a; border-color: #334155; color: #e2e8f0; }
+.dark .input::placeholder { color: #64748b; }
+.dark .label { color: #cbd5e1; }
+.dark .btn-outline { background-color: #151c31; border-color: #334155; color: #e2e8f0; }
+.dark .btn-outline:hover { background-color: #1e293b; }
+.dark .btn-ghost { color: #cbd5e1; }
+.dark .btn-ghost:hover { background-color: #1e293b; }
+.dark .hover\:bg-slate-50:hover { background-color: #1e293b; }
+.dark .hover\:bg-slate-100:hover { background-color: #1e293b; }
+.dark .hover\:bg-red-50:hover { background-color: #3f1d2e; }
+.dark .bg-amber-50 { background-color: #2b2112; }
+.dark .bg-amber-100 { background-color: #3b2c14; }
+.dark .text-amber-800, .dark .text-amber-900, .dark .text-amber-950 { color: #fcd34d; }
+.dark .bg-emerald-50 { background-color: #0f2a22; }
+.dark .bg-emerald-100 { background-color: #12382c; }
+.dark .text-emerald-700, .dark .text-emerald-900 { color: #6ee7b7; }
+.dark .bg-red-50 { background-color: #331a24; }
+.dark .bg-red-100 { background-color: #431c2b; }
+.dark .text-red-600, .dark .text-red-700, .dark .text-red-900 { color: #fca5a5; }
+.dark .bg-blue-100 { background-color: #172b4d; }
+.dark .text-blue-700 { color: #93c5fd; }
+.dark .bg-violet-50 { background-color: #241b3f; }
+.dark .bg-violet-100 { background-color: #2e2257; }
+.dark .text-violet-600, .dark .text-violet-700 { color: #c4b5fd; }
+.dark .bg-teal-100 { background-color: #12363a; }
+.dark .text-teal-700 { color: #5eead4; }
+.dark .bg-rose-100 { background-color: #3b1e2d; }
+.dark .text-rose-700 { color: #fda4af; }
+.dark .bg-sky-100 { background-color: #16324a; }
+.dark .text-sky-700 { color: #7dd3fc; }
+.dark .border-amber-200 { border-color: #5b451c; }
+.dark .border-brand-100 { border-color: #312b63; }
+.dark .border-red-200 { border-color: #5c2436; }
+.dark .border-emerald-200 { border-color: #17553f; }
